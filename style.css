@@ -244,15 +244,16 @@ body {
     }
 
     .grid-container {
-        margin-left: 0;
+        margin-left: 60px;
         max-width: 100%;
         grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
         align-content: start; /* Cambia la alineación */
     }
 
     .grid-container img {
-        max-width: 100%;
+        max-width: 60%;
         height: auto;
+      
     }
 
     .text-container {
@@ -276,23 +277,23 @@ body {
     .link-container a {
         margin-bottom: 10px;
     }
-}
-/* En pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .menu a {
-        font-size: 14px; /* Reducir el tamaño de los enlaces */
+
+    /* Asegurar que los elementos se apilen verticalmente en pantallas pequeñas */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .grid-container img {
-        max-width: 90%;
-        margin: 0 auto;
+    /* Ajustar el orden para que el contenedor de texto aparezca debajo de la grid */
+    .grid-container {
+        order: 0; /* Mantiene la grid en su lugar */
     }
 
-    .text-container h1 {
-        font-size: 1.8em; /* Reducir el tamaño de la cabecera */
-    }
-
-    .text-container p {
-        font-size: 1em; /* Ajustar el tamaño del texto */
+    .text-container {
+        order: 2; /* Asegura que el contenedor de texto vaya después de la grid */
     }
 }
+
+
+
