@@ -1,0 +1,298 @@
+/* Variables de color */
+:root {
+    --color-principal: #3498db; /* Azul */
+    --color-secundario: #ffffff; /* blanco */
+    --color-fondo: #ecf0f1; /* Gris claro */
+    --color-texto: #2c3e50; /* Negro suave */
+    --color-hover: #2980b9; /* Azul oscuro */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    font-size: 18px;
+   
+}
+
+/* Encabezado */
+header {
+    background: var(--color-principal);
+    padding: 20px 0;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-hover);
+}
+
+.menu a:active{
+    background-color: var(--color-hover); /* Color de fondo para la pestaña activa */
+    color: white; /* Color del texto para la pestaña activa */
+    border-radius: 5px; /* Bordes redondeados para la pestaña activa */
+}
+
+/* Contenido principal */
+main {
+    max-width: 800px; /* Ancho máximo del contenedor principal */
+    min-height: 600px; /* Altura mínima para el contenedor principal */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: var(--color-fondo); /* Color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cambia el tamaño mínimo según tus necesidades */
+    grid-auto-rows: 150px; /* Ajusta la altura de las filas según sea necesario */
+    align-content: end; /* Esto alinea los elementos en la parte inferior */
+    max-width: 800px;
+    margin-left: 50%;
+}
+
+.grid-container img {
+    max-width: 350px; /* Asegura que la imagen no exceda el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor sin distorsionarse */
+}
+.grid-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10    px 10px var(--color-principal); /* Sombra con el color principal */
+}
+
+/* Secciones de texto */
+
+.Bienvenidos {
+    color: var(--color-principal);
+    
+}
+
+.lic {
+    color: var(--color-principal);
+}
+
+.text-container {
+    text-align: auto; /* Alinea todo el contenido */
+    margin-right: 50%;
+    margin-bottom: 20px;
+}
+.text {
+    margin: 20px 0;
+    font-size: 1.2em;
+    text-align: left;
+} 
+
+.link-container {
+    display: flex; /* Usar flexbox para alinear los enlaces en fila */
+    justify-content: flex-start; /* Alinear los enlaces al inicio */
+    margin-top: 20px; /* Espacio superior opcional */
+}
+
+.link-container a {
+    margin-right: 15px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Eliminar el subrayado */
+    color: var(--color-texto); /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #3498db; /* Color de fondo */
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.link-container a:hover {
+    background-color: #2980b9;
+    text-decoration:solid; /* Opcional: agregar subrayado al pasar el mouse */
+}
+
+/* Formulario de contacto */
+.form-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3)
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-texto);
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--color-hover);
+}
+
+
+
+/* Logos */
+.logos {
+    display: flex;
+    justify-content: left;
+    margin: 20px 0;
+}
+
+.logos a {
+    margin: 0 10px;
+}
+
+.logos img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3)
+}
+
+.footer p {
+    margin: 5px 0; /* Espaciado entre párrafos */
+    font-size: 14px; /* Tamaño de fuente */
+
+}   
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+
+/* En pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .grid-container {
+        margin-left: 0;
+        max-width: 100%;
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        align-content: start; /* Cambia la alineación */
+    }
+
+    .grid-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-container {
+        margin-right: 0;
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .logos {
+        justify-content: center; /* Centra los logos */
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .link-container {
+        flex-direction: column; /* Los enlaces se apilan verticalmente */
+        align-items: center;
+    }
+
+    .link-container a {
+        margin-bottom: 10px;
+    }
+}
+/* En pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 14px; /* Reducir el tamaño de los enlaces */
+    }
+
+    .grid-container img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .text-container h1 {
+        font-size: 1.8em; /* Reducir el tamaño de la cabecera */
+    }
+
+    .text-container p {
+        font-size: 1em; /* Ajustar el tamaño del texto */
+    }
+}
